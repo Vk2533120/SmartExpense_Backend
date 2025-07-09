@@ -14,12 +14,8 @@ connectDB();
 const app = express();
 
 // Middleware
-app.use(cors({
-    origin: ['https://smartexpens.netlify.app/'], // <--- ADD YOUR NETLIFY URL HERE
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: true,
-    allowedHeaders: ['Content-Type', 'Authorization'],
-}));app.use(express.json()); // Body parser for JSON data
+app.use(cors()); // Enable CORS for all origins by default (for development)
+app.use(express.json()); // Body parser for JSON data
 
 // Routes
 app.use('/api/expenses', expenseRoutes);
