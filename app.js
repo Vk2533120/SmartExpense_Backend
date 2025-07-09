@@ -15,7 +15,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-    origin: ['http://localhost:5173'], // <--- ADD YOUR NETLIFY URL HERE
+    origin: ['https://smartexpens.netlify.app/'], // <--- ADD YOUR NETLIFY URL HERE
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
     allowedHeaders: ['Content-Type', 'Authorization'],
